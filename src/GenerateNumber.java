@@ -5,9 +5,10 @@ public class GenerateNumber {
     private int minimum;
     private int maximum;
 
-    public int GenerateNumber{
-        minimum=1;
-        maximum=100;
-        this.randomNmber= minimum + (int)(Math.random() * maximum);
+    int GenerateNumber(){
+        this.minimum=1;
+        this.maximum=100;
+        this.randomNmber= minimum+(int)(Math.random()*maximum) ;
+        return randomNmber;
     }
 }
