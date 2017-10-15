@@ -5,13 +5,13 @@ public class Main {
 
         GenerateNumber computerNumber=new GenerateNumber();
         int getComputerNumber=computerNumber.GenerateNumber();
-        System.out.println(getComputerNumber);
+        //System.out.println(getComputerNumber);
 
         GuessNumber guess=new GuessNumber();
 
         for (int leftTimes=9;leftTimes>=0;leftTimes--){
 
-            System.out.println("Guess a number between 1 to 100:");
+            System.out.println("Guess a number between 1 and 100:");
             Scanner scanner = new Scanner(System.in);
             int guessNumber = scanner.nextInt();
 
@@ -22,8 +22,10 @@ public class Main {
             }else{
                 if(leftTimes==0){
                     System.out.println("Game Over.");
+                    System.out.println("The Number was: "+ getComputerNumber);
                 }else {
-                    System.out.println(isRight + " You left " + leftTimes + " times to guess.");
+                    System.out.println(isRight + " You have " + leftTimes + " guess(es) left.");
+
                 }
             }
 
